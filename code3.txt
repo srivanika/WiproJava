@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+
+// Read only region start
+class UserMainCode
+{
+    public int secondLastDigitOf(int input1)
+    {
+        // Read only region end
+
+        input1 = Math.abs(input1);
+
+        if(input1 < 10)
+            return -1;
+
+        return (input1 / 10) % 10;
+    }
+}
