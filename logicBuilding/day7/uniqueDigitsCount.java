@@ -3,7 +3,7 @@ class UserMainCode
 {
     public int uniqueDigitsCount(int input1)
     {
-        // Read only region end
+      
 
         boolean[] visited = new boolean[10];
         int count = 0;
