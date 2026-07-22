@@ -7,3 +7,4 @@ public class Foundation {
     protected int var3 = 30;
     public int var4 = 40;
 }
+ 
