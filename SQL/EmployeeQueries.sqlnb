@@ -1,0 +1,52 @@
+cells:
+  - kind: 2
+    value: "SELECT table_name\r
+
+      FROM user_tables;"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM employees;
+    languageId: oracle-sql
+  - kind: 2
+    value: SHOW USER;
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT table_name\r
+
+      FROM user_tables\r
+
+      ORDER BY table_name;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "CREATE TABLE EMPLOYEES (\r
+
+      \    EMPLOYEE_ID NUMBER PRIMARY KEY,\r
+
+      \    FIRST_NAME VARCHAR2(50),\r
+
+      \    LAST_NAME VARCHAR2(50),\r
+
+      \    SALARY NUMBER\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT COUNT(*) FROM user_tables;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMPLOYEES VALUES (101, 'John', 'Smith', 50000);\r
+
+      INSERT INTO EMPLOYEES VALUES (102, 'Alice', 'Johnson', 60000);\r
+
+      INSERT INTO EMPLOYEES VALUES (103, 'David', 'Brown', 55000);\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM EMPLOYEES;
+    languageId: oracle-sql
+  - kind: 2
+    value: DESC EMPLOYEES;
+    languageId: oracle-sql
