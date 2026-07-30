@@ -1,0 +1,35 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE departments (\r
+
+      \    department_id   NUMBER(4) PRIMARY KEY,\r
+
+      \    department_name VARCHAR2(30) NOT NULL,\r
+
+      \    manager_id      NUMBER(6),\r
+
+      \    location_id     NUMBER(4)\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO departments VALUES (10, 'Administration', 200, 1700);\r
+
+      INSERT INTO departments VALUES (20, 'Marketing', 201, 1800);\r
+
+      INSERT INTO departments VALUES (30, 'Purchasing', 114, 1700);\r
+
+      INSERT INTO departments VALUES (40, 'Human Resources', 203, 2400);\r
+
+      INSERT INTO departments VALUES (50, 'Shipping', 121, 1500);\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 2
+    value: DESC departments;
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM departments;
+    languageId: oracle-sql
