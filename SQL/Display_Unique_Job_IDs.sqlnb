@@ -1,0 +1,62 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE employees_hr (\r
+
+      \    employee_id NUMBER(6) PRIMARY KEY,\r
+
+      \    last_name VARCHAR2(25) NOT NULL,\r
+
+      \    job_id VARCHAR2(10),\r
+
+      \    hire_date DATE\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO employees_hr VALUES\r
+
+      (100, 'King', 'AD_PRES', DATE '2003-06-17');\r
+
+      \r
+
+      INSERT INTO employees_hr VALUES\r
+
+      (101, 'Kochhar', 'AD_VP', DATE '2005-09-21');\r
+
+      \r
+
+      INSERT INTO employees_hr VALUES\r
+
+      (102, 'De Haan', 'AD_VP', DATE '2001-01-13');\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT employee_id,\r
+
+      \       last_name,\r
+
+      \       job_id,\r
+
+      \       hire_date AS STARTDATE\r
+
+      FROM employees_hr;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT DISTINCT job_id\r
+
+      FROM employees_hr;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT employee_id AS \"Emp #\",\r
+
+      \       last_name AS \"Employee\",\r
+
+      \       job_id AS \"Job\",\r
+
+      \       hire_date AS \"Hire Date\"\r
+
+      FROM employees_hr;"
+    languageId: oracle-sql
