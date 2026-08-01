@@ -1,0 +1,285 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE EMPLOYEES_ASSIGNMENT (\r
+
+      \    EMPLOYEE_ID NUMBER(6) PRIMARY KEY,\r
+
+      \    FIRST_NAME VARCHAR2(20),\r
+
+      \    LAST_NAME VARCHAR2(25) NOT NULL,\r
+
+      \    EMAIL VARCHAR2(25),\r
+
+      \    PHONE_NUMBER VARCHAR2(20),\r
+
+      \    HIRE_DATE DATE NOT NULL,\r
+
+      \    JOB_ID VARCHAR2(10) NOT NULL,\r
+
+      \    SALARY NUMBER(8,2),\r
+
+      \    COMMISSION_PCT NUMBER(2,2),\r
+
+      \    MANAGER_ID NUMBER(6),\r
+
+      \    DEPARTMENT_ID NUMBER(4)\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (100,'Steven','King','SKING','5151234567',\r
+
+      DATE '2003-06-17','AD_PRES',24000,NULL,NULL,90);\r
+
+      \r
+
+      INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (101,'Neena','Kochhar','NKOCHHAR','5151234568',\r
+
+      DATE '2005-09-21','AD_VP',17000,NULL,100,90);\r
+
+      \r
+
+      INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (102,'Lex','De Haan','LDEHAAN','5151234569',\r
+
+      DATE '2001-01-13','AD_VP',17000,NULL,100,90);\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM EMPLOYEES_ASSIGNMENT;
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT employee_id, last_name\r
+
+      FROM employees_assignment;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (103,'Alexander','Hunold','AHUNOLD','5904234567',\r
+
+      DATE '2006-01-03','IT_PROG',9000,NULL,102,60);\r
+
+      \r
+
+      INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (104,'Bruce','Ernst','BERNST','5904234568',\r
+
+      DATE '2007-05-21','IT_PROG',6000,NULL,103,60);\r
+
+      \r
+
+      INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (176,'Jonathon','Taylor','JTAYLOR','5904234570',\r
+
+      DATE '1994-03-24','SA_REP',8600,0.20,149,80);\r
+
+      \r
+
+      INSERT INTO EMPLOYEES_ASSIGNMENT\r
+
+      VALUES (177,'Jose','Matos','JMATOS','5904234571',\r
+
+      DATE '1995-07-15','ST_CLERK',2800,NULL,124,50);\r
+
+      \r
+
+      COMMIT;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT employee_id,\r
+
+      \       last_name,\r
+
+      \       department_id,\r
+
+      \       salary\r
+
+      FROM employees_assignment;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT last_name,\r
+
+      \       salary\r
+
+      FROM employees_assignment\r
+
+      WHERE salary > 12000;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "\r
+
+      SELECT last_name,\r
+
+      \       department_id\r
+
+      FROM employees_assignment\r
+
+      WHERE employee_id = 176;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 3\r
+
+      SELECT last_name,\r
+
+      \       salary\r
+
+      FROM employees_assignment\r
+
+      WHERE salary NOT BETWEEN 5000 AND 12000;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 4\r
+
+      SELECT last_name,\r
+
+      \       job_id,\r
+
+      \       hire_date\r
+
+      FROM employees_assignment\r
+
+      WHERE last_name IN ('Matos', 'Taylor')\r
+
+      ORDER BY hire_date ASC;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 5\r
+
+      SELECT last_name,\r
+
+      \       department_id\r
+
+      FROM employees_assignment\r
+
+      WHERE department_id IN (20, 50)\r
+
+      ORDER BY last_name ASC;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 6\r
+
+      SELECT last_name AS \"Employee\",\r
+
+      \       salary AS \"Monthly Salary\"\r
+
+      FROM employees_assignment\r
+
+      WHERE salary BETWEEN 5000 AND 12000\r
+
+      AND department_id IN (20, 50);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 7\r
+
+      SELECT last_name,\r
+
+      \       hire_date\r
+
+      FROM employees_assignment\r
+
+      WHERE EXTRACT(YEAR FROM hire_date) = 1994;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 8\r
+
+      SELECT last_name,\r
+
+      \       job_id\r
+
+      FROM employees_assignment\r
+
+      WHERE manager_id IS NULL;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 9\r
+
+      SELECT last_name,\r
+
+      \       salary,\r
+
+      \       commission_pct\r
+
+      FROM employees_assignment\r
+
+      WHERE commission_pct IS NOT NULL\r
+
+      ORDER BY 2 DESC, 3 DESC;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT last_name,\r
+
+      \       salary\r
+
+      FROM employees_assignment\r
+
+      WHERE salary > &Salary_value;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 11\r
+
+      SELECT employee_id,\r
+
+      \       last_name,\r
+
+      \       salary,\r
+
+      \       department_id\r
+
+      FROM employees_assignment\r
+
+      WHERE manager_id = &manager_id\r
+
+      ORDER BY &sorted_by;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 12\r
+
+      SELECT last_name\r
+
+      FROM employees_assignment\r
+
+      WHERE last_name LIKE '__a%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 13\r
+
+      SELECT last_name\r
+
+      FROM employees_assignment\r
+
+      WHERE last_name LIKE '%a%'\r
+
+      \  AND last_name LIKE '%e%';"
+    languageId: oracle-sql
+  - kind: 2
+    value: "-- Question 14\r
+
+      SELECT last_name,\r
+
+      \       job_id,\r
+
+      \       salary\r
+
+      FROM employees_assignment\r
+
+      WHERE job_id IN ('SA_REP', 'ST_CLERK')\r
+
+      \  AND salary NOT IN (2500, 3500, 7000);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "DESC EMPLOYEES_ASSIGNMENT;\r\n"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT * FROM EMPLOYEES_ASSIGNMENT;\r\n"
+    languageId: oracle-sql
