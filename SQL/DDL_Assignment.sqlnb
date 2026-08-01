@@ -1,0 +1,151 @@
+cells:
+  - kind: 2
+    value: "CREATE TABLE DEPT\r
+
+      (\r
+
+      \    DEPT_ID NUMBER(7) PRIMARY KEY,\r
+
+      \    DEPT_NAME VARCHAR2(20)\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: DESC DEPT;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT (DEPT_ID, DEPT_NAME)\r
+
+      SELECT DEPARTMENT_ID,\r
+
+      \       DEPARTMENT_NAME\r
+
+      FROM DEPARTMENTS;"
+    languageId: oracle-sql
+  - kind: 2
+    value: SELECT * FROM DEPT;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES (10,'Accounts');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES (10,'Accounts');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES (210,'Accounts');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM DEPT\r
+
+      WHERE DEPT_ID = 210;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES (NULL,'TT');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r\nVALUES (20,'TT');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT dept_id\r
+
+      FROM dept\r
+
+      ORDER BY dept_id;"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES (220,'TT');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES ('A1','Accounts');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO DEPT\r
+
+      VALUES (230,'Accounts');"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r
+
+      FROM DEPT\r
+
+      WHERE DEPT_ID IN (220,230);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "CREATE TABLE EMP\r
+
+      (\r
+
+      \    ID NUMBER(7) PRIMARY KEY,\r
+
+      \    LAST_NAME VARCHAR2(25) NOT NULL,\r
+
+      \    FIRST_NAME VARCHAR2(25),\r
+
+      \    DEPT_ID NUMBER(7),\r
+
+      \    CONSTRAINT EMP_DEPT_FK\r
+
+      \    FOREIGN KEY (DEPT_ID)\r
+
+      \    REFERENCES DEPT(DEPT_ID)\r
+
+      );"
+    languageId: oracle-sql
+  - kind: 2
+    value: DESC EMP;
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (101,'Sam','Sundar',10);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (101,'Ram','Krishna',20);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (102,'Ram','Krishna',20);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (102,'Gopi',NULL,40);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (103,'Gopi',NULL,40);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (104,NULL,'Ram',20);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "INSERT INTO EMP\r
+
+      VALUES (104,'Sharma','Ram',20);"
+    languageId: oracle-sql
+  - kind: 2
+    value: "SELECT *\r\nFROM EMP;"
+    languageId: oracle-sql
+  - kind: 2
+    value: COMMIT;
+    languageId: oracle-sql
