@@ -13,6 +13,9 @@ cells:
       );"
     languageId: oracle-sql
   - kind: 2
+    value: ""
+    languageId: oracle-sql
+  - kind: 2
     value: "INSERT INTO departments VALUES (10, 'Administration', 200, 1700);\r
 
       INSERT INTO departments VALUES (20, 'Marketing', 201, 1800);\r
