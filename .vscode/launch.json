@@ -1,0 +1,51 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Assignment1",
+            "request": "launch",
+            "mainClass": "Assignment1",
+            "projectName": "JunitLearning"
+        },
+        {
+            "type": "java",
+            "name": "Assignment2",
+            "request": "launch",
+            "mainClass": "Assignment2",
+            "projectName": "JunitLearning"
+        },
+        {
+            "type": "java",
+            "name": "DBConnection",
+            "request": "launch",
+            "mainClass": "DBConnection",
+            "projectName": "JunitLearning"
+        },
+        {
+            "type": "java",
+            "name": "JDBCCalls",
+            "request": "launch",
+            "mainClass": "JDBCCalls",
+            "projectName": "JunitLearning"
+        },
+        {
+    "type": "java",
+    "name": "Run JDBCCalls",
+    "request": "launch",
+    "mainClass": "JDBCCalls",
+    "projectName": "JunitLearning",
+    "args": "2 101"
+}
+    ]
+}
