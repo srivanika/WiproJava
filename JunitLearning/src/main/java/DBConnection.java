@@ -1,5 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
+import java.sql.ResultSet;
 
 public class DBConnection {
 
@@ -10,16 +12,23 @@ public class DBConnection {
         String password = "hr";
 
         try {
-           // Class.forName("oracle.jdbc.driver.OracleDriver");
 
             Connection con = DriverManager.getConnection(url, username, password);
 
-            System.out.println("Connection Established successfully");
+            Statement st = con.createStatement();
 
+            ResultSet rs = st.executeQuery("SELECT * FROM emp");
+
+            while(rs.next())
+            {
+                System.out.println(rs.getInt(1) + " " + rs.getString("ename"));
+            }
+
+            rs.close();
+            st.close();
             con.close();
 
-        } catch (Exception e) {
-            System.out.println("Connection could not be established");
+        } catch(Exception e) {
             e.printStackTrace();
         }
     }
